@@ -1,5 +1,5 @@
-var myName = window.prompt("What's your name?");
-console.log("Hello",myName);
+// var myName = window.prompt("What's your name?");
+// console.log("Hello",myName);
 
 document.getElementById("gotobutton").onclick = function(){
 
