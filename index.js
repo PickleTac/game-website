@@ -1,12 +1,12 @@
 // var myName = window.prompt("What's your name?");
 // console.log("Hello",myName);
 
-document.getElementById("gotobutton").onclick = function(){
+// document.getElementById("gotobutton").onclick = function(){
 
-  var website = document.getElementById("website").value;
-  document.getElementById('link').href = `${website}`;
+//   var website = document.getElementById("website").value;
+//   document.getElementById('link').href = `${website}`;
   
-}
+// }
 
 var character = document.querySelector(".character");
 var map = document.querySelector(".map");
@@ -15,7 +15,7 @@ var map = document.querySelector(".map");
 var x = 90;
 var y = 34;
 var held_directions = []; //State of which arrow keys we are holding down
-var speed = 1; //How fast the character moves in pixels per frame
+var speed = 1.3; //How fast the character moves in pixels per frame
 
 const placeCharacter = () => {
    
@@ -36,8 +36,8 @@ const placeCharacter = () => {
    //Limits (gives the illusion of walls)
    var leftLimit = -8;
    var rightLimit = (16 * 11)+8;
-   var topLimit = -8 + 32;
-   var bottomLimit = (16 * 7);
+   var topLimit = -8 + -15;
+   var bottomLimit = (16 * 8);
    if (x < leftLimit) { x = leftLimit; }
    if (x > rightLimit) { x = rightLimit; }
    if (y < topLimit) { y = topLimit; }
@@ -71,10 +71,10 @@ const directions = {
    right: "right",
 }
 const keys = {
-   38: directions.up,
-   37: directions.left,
-   39: directions.right,
-   40: directions.down,
+   87: directions.up,
+   65: directions.left,
+   68: directions.right,
+   83: directions.down,
 }
 document.addEventListener("keydown", (e) => {
    var dir = keys[e.which];
@@ -91,6 +91,14 @@ document.addEventListener("keyup", (e) => {
    }
 });
 
+document.addEventListener('keypress', e =>{
+  console.log(e)
+  if(e.keyCode === 17 && e.keyCode === 18 && e.keyCode === 66){
+    alert('please tell us what game has been blocked ' + e.key )
+      // alert('Sorry! You cant use ' + e.key )
+      // e.preventDefault()
+  }
+})
 
 
 /* BONUS! Dpad functionality for mouse and touch */
