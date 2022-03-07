@@ -89,7 +89,7 @@ body {
 
 .map {
   image-rendering: pixelated;
-  background-image: url("https://cdn.discordapp.com/attachments/944729495326318592/948363156743405579/OptionsBackdrop.jpg");
+  background-image: url("pixil-frame-0 (3).png");
   background-size: 100%;
   width: calc(13 * var(--grid-cell));
   height: calc(10 * var(--grid-cell));

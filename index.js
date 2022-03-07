@@ -36,8 +36,8 @@ const placeCharacter = () => {
    //Limits (gives the illusion of walls)
    var leftLimit = -8;
    var rightLimit = (16 * 11)+8;
-   var topLimit = -8 + -15;
-   var bottomLimit = (16 * 8);
+   var topLimit = -8 + 32;
+   var bottomLimit = (16 * 7);
    if (x < leftLimit) { x = leftLimit; }
    if (x > rightLimit) { x = rightLimit; }
    if (y < topLimit) { y = topLimit; }
